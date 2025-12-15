@@ -1,0 +1,36 @@
+@use "../../sass/base" as b;
+@use "../../sass/mixins" as mx;
+
+.carousel-btns {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @include mx.for-desktop-up {
+    cursor: pointer;
+    transform: translateX(100%);
+  }
+
+  button {
+    background-color: b.$black;
+    width: b.$sp-700;
+    height: b.$sp-700;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mx.for-tablet-portrait-up {
+      width: b.$sp-1000;
+      height: b.$sp-1000;
+    }
+  }
+
+  @include mx.for-desktop-up {
+    button:hover {
+      background-color: b.$grey-800;
+      cursor: pointer;
+    }
+  }
+}

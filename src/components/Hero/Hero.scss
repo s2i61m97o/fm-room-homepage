@@ -1,0 +1,84 @@
+@use "../../sass/base" as b;
+@use "../../sass/mixins" as mx;
+
+.hero {
+  @include mx.for-desktop-up {
+    display: grid;
+    grid-template: 1fr / 3fr 2fr;
+  }
+}
+
+.image-container {
+  position: relative;
+  @include mx.for-desktop-up {
+    max-width: 840px;
+  }
+
+  .hero-img {
+    width: 100vw;
+
+    @include mx.for-desktop-up {
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+      width: 100%;
+    }
+  }
+}
+
+.hero-text {
+  padding: b.$sp-800 b.$sp-400;
+
+  @include mx.for-tablet-portrait-up {
+    padding-inline: b.$sp-800;
+  }
+
+  @include mx.for-desktop-up {
+    padding: 8.75rem 6.25rem;
+  }
+
+  h1 {
+    @include mx.txt-prst-2;
+    color: b.$black;
+
+    @include mx.for-tablet-portrait-up {
+      @include mx.txt-prst-1;
+    }
+  }
+
+  p {
+    @include mx.txt-prst-3-md;
+    color: b.$grey-500;
+    margin-block: b.$sp-200 b.$sp-300;
+  }
+
+  button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    @include mx.txt-prst-4;
+
+    @include mx.for-tablet-portrait-up {
+      width: fit-content;
+      gap: b.$sp-300;
+    }
+
+    @include mx.for-desktop-up {
+      gap: b.$sp-400;
+
+      object {
+        stroke: b.$grey-500;
+      }
+    }
+  }
+
+  button:hover {
+    @include mx.for-desktop-up {
+      color: b.$grey-500;
+      cursor: pointer;
+    }
+  }
+}

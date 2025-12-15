@@ -1,0 +1,39 @@
+@use "../../sass/base" as b;
+@use "../../sass/mixins" as mx;
+
+
+.about {
+    @include mx.for-desktop-up{
+        display: flex;
+    }
+}
+
+.about-img {
+  width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.about-info {
+  padding: b.$sp-600 b.$sp-400;
+
+  @include mx.for-tablet-portrait-up {
+    padding: b.$sp-800;
+  }
+
+  @include mx.for-desktop-up {
+    padding: b.$sp-750 b.$sp-600;
+  }
+}
+
+h2 {
+  @include mx.txt-prst-3-b;
+  text-transform: uppercase;
+  margin-block-end: b.$sp-200;
+}
+
+p {
+  @include mx.txt-prst-3-md;
+  color: b.$grey-500;
+}

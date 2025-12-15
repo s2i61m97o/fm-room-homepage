@@ -1,0 +1,68 @@
+// TEXT PRESETS
+
+@mixin txt-prst-1 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 90%;
+}
+@mixin txt-prst-2 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 100%;
+}
+@mixin txt-prst-3-b {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 7px;
+  line-height: 140%;
+}
+
+@mixin txt-prst-3-sb {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.7px;
+  line-height: 100%;
+}
+@mixin txt-prst-3-md {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 140%;
+}
+@mixin txt-prst-4 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 12.5px;
+  line-height: 100%;
+}
+
+// MEDIA QUERIES
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
