@@ -1,7 +1,11 @@
+html, body {
+    overflow-x: hidden;
+}
+
 @media (min-width: 1200px) {
-        main {
-            display: grid;
-            grid-template: 2fr 1fr / 100%;
-            min-height: 100vh;
-    }
+  main {
+    display: grid;
+    grid-template: 2fr 1fr / 100vw;
+    min-height: 100vh;
+  }
 }

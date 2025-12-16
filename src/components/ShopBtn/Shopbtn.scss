@@ -1,0 +1,31 @@
+@use "../../sass/base" as b;
+@use "../../sass/mixins" as mx;
+
+button {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  @include mx.txt-prst-4;
+
+  @include mx.for-tablet-portrait-up {
+    width: fit-content;
+    gap: b.$sp-300;
+  }
+
+  @include mx.for-desktop-up {
+    gap: b.$sp-400;
+  }
+}
+
+@include mx.for-desktop-up {
+  button:hover {
+    color: b.$grey-500;
+    cursor: pointer;
+    svg {
+      fill: b.$grey-500;
+    }
+  }
+}

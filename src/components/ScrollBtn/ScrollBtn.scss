@@ -3,9 +3,10 @@
 
 .carousel-btns {
   display: flex;
-  position: absolute;
-  bottom: 0;
+  grid-area: image;
+  place-self: end end;
   right: 0;
+  z-index: 2;
 
   @include mx.for-desktop-up {
     cursor: pointer;

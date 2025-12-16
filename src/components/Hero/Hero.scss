@@ -2,47 +2,42 @@
 @use "../../sass/mixins" as mx;
 
 .hero {
+  display: grid;
+  grid-template-areas:
+    "image"
+    "text";
+
   @include mx.for-desktop-up {
-    display: grid;
-    grid-template: 1fr / 3fr 2fr;
+    grid-template-areas: "image text";
+    grid-template-columns: 60vw 40vw;
   }
 }
 
-.image-container {
-  position: relative;
-  width: 100vw;
+.hero-img {
+  grid-area: image;
+  width: 100%;
+  transform: translate(0, 0);
+  transition: all 750ms ease-out;
+
   @include mx.for-desktop-up {
-    max-width: 840px;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
   }
-
-  .hero-img {
-    width: 100vw;
-
-    @include mx.for-desktop-up {
-      height: 100%;
-      object-fit: cover;
-      object-position: left;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-}
-
-.text-container {
-  z-index: -1;
 }
 
 .hero-text {
   padding: b.$sp-800 b.$sp-400;
+  grid-area: text;
+  transform: translate(0, 0);
+  transition: all 750ms ease-out;
 
   @include mx.for-tablet-portrait-up {
     padding-inline: b.$sp-800;
   }
 
   @include mx.for-desktop-up {
-    position: absolute;
+    grid-row: 1 / 2;
     top: 0;
     padding: 8.75rem 6.25rem;
   }
@@ -61,51 +56,9 @@
     color: b.$grey-500;
     margin-block: b.$sp-200 b.$sp-300;
   }
-
-  button {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    text-transform: uppercase;
-    background-color: transparent;
-    border: none;
-    @include mx.txt-prst-4;
-
-    @include mx.for-tablet-portrait-up {
-      width: fit-content;
-      gap: b.$sp-300;
-    }
-
-    @include mx.for-desktop-up {
-      gap: b.$sp-400;
-
-      object {
-        stroke: b.$grey-500;
-      }
-    }
-  }
-
-  button:hover {
-    @include mx.for-desktop-up {
-      color: b.$grey-500;
-      cursor: pointer;
-    }
-  }
 }
 
 // TRANSITIONS
-
-.hero-text {
-  transform: translate(0, 0);
-  transition: all 750ms ease-out;
-}
-
-.img-one,
-.img-two,
-.img-three {
-  transform: translate(0, 0);
-  transition: all 750ms ease-out;
-}
 
 .slide-left {
   transform: translate(-100%, 0);
@@ -113,7 +66,13 @@
 .slide-up {
   transform: translate(0, -100%);
 }
-
 .slide-right {
   transform: translate(100%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-img,
+  .hero-text {
+    transition: none;
+  }
 }
