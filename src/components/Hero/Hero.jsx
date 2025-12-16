@@ -96,16 +96,12 @@ export default function Main({useScreenSize, screenBreaks}) {
       <section className={textOneClass}>
         <h1>{data[0].title}</h1>
         <p>{data[0].text}</p>
-        <button>
-          <ShopBtn />
-        </button>
+        <ShopBtn />
       </section>
       <section className={textTwoClass}>
         <h1>{data[1].title}</h1>
         <p>{data[1].text}</p>
-        <button>
-          <ShopBtn />
-        </button>
+        <ShopBtn />
       </section>
       <section className={textThreeClass}>
         <h1>{data[2].title}</h1>

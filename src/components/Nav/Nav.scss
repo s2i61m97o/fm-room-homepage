@@ -52,7 +52,6 @@ header {
     gap: b.$sp-200;
     align-items: center;
     background-color: white;
-    position: absolute;
     padding: clamp(3rem, 2.6479rem + 1.5023vw, 4rem)
       clamp(1.5rem, 0.6197rem + 3.7559vw, 4rem);
     z-index: 50;
@@ -133,4 +132,10 @@ header {
 .bkground-mask.show {
   opacity: 0.5;
   z-index: 25;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a::after {
+    transition: none;
+  }
 }

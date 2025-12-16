@@ -20,6 +20,7 @@ export default function Navbar() {
           onClick={toggleMenu}
           aria-label="open menu"
           className="menu-toggle"
+          type="button"
         >
           <img src={hamburgerIcon} alt="hamburger icon for opening menu" />
         </button>
