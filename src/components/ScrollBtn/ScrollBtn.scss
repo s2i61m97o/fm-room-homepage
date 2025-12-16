@@ -33,5 +33,11 @@
       background-color: b.$grey-800;
       cursor: pointer;
     }
+
+    button:focus-visible {
+      outline: none;
+      background-color: b.$grey-800;
+
+    }
   }
 }

@@ -14,6 +14,7 @@
 }
 
 .hero-img {
+  display: initial;
   grid-area: image;
   width: 100%;
   transform: translate(0, 0);
@@ -27,10 +28,12 @@
 }
 
 .hero-text {
+  display: initial;
   padding: b.$sp-800 b.$sp-400;
   grid-area: text;
   transform: translate(0, 0);
   transition: all 750ms ease-out;
+  
 
   @include mx.for-tablet-portrait-up {
     padding-inline: b.$sp-800;
@@ -62,12 +65,15 @@
 
 .slide-left {
   transform: translate(-100%, 0);
+  visibility: hidden;
 }
 .slide-up {
   transform: translate(0, -100%);
+  visibility: hidden;
 }
 .slide-right {
   transform: translate(100%, 0);
+  visibility: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {

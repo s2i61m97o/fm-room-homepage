@@ -88,6 +88,11 @@ header {
               color: white;
             }
           }
+          a:focus-visible {
+            outline-offset: 5px;
+            outline-color: b.$black;
+            outline-width: 2px;
+          }
           a::after {
             content: "";
             position: absolute;
