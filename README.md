@@ -1,6 +1,6 @@
 # Frontend Mentor - Room homepage solution
 
-This is a solution to the [Room homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Room homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -14,9 +14,6 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -30,13 +27,23 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+<details>
+  <summary>Mobile Screenshot</summary>
+  <img src="./completed-screenshot-mob.jpeg" />
+  </details>
+<details>
+  <summary>Tablet Screenshot</summary>
+  <img src="./completed-screenshot-tablet.jpeg" />
+  </details>
+<details>
+  <summary>Desktop Screenshot</summary>
+  <img src="./completed-screenshot-desktop.jpeg" />
+  </details>
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Github Repo](https://github.com/s2i61m97o/fm-room-homepage)
+- [Live Site](https://s2i61m97o.github.io/fm-room-homepage)
 
 ## My process
 
@@ -48,22 +55,23 @@ Users should be able to:
 - CSS Grid
 - SASS
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-
+- [React](https://reactjs.org/)
 
 ### What I learned
 
+How elements are laid out needs to be carefully considered when using CSS transitions. I had to overhaul a lot of my original layout CSS when I was trying to animate the hero images and text as it would not work correctly otherwise. Originally I was conditionally rendering the images and text depending on state (which was basically a slide number). I had to change this to render all the images and text and just translate them of the screen, sliding them back on the screen when needed.  
 
 
 ### Continued development
 
+I will continue to look at using CSS transitions and animations in appropriate places within future projects, as well as thinking about how I am going to implement them whilst dealing with layout, so as not to have to overhaul sections again. 
+After finding the below Kevin Powell video on underused CSS features, I will also look deeper into CSS Grid and its capabilities.
 
 ### Useful resources
 
-- [3 underused CSS Grid Features](https://youtube.com/watch?v=ciuZJE74wBA) Kevin Powell YouTube video - using absolute positioning in CSS Grid. This greatly helped when adding transitions for mobile and tablet layouts.
+- [3 underused CSS Grid Features](https://youtube.com/watch?v=ciuZJE74wBA) Kevin Powell YouTube video
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@s2i61m97o](https://www.frontendmentor.io/profile/s2i61m97o)
+- Twitter - [@mattyjsimmo](https://www.twitter.com/mattyjsimmo)
