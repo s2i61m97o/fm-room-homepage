@@ -10,6 +10,7 @@
 
 .image-container {
   position: relative;
+  width: 100vw;
   @include mx.for-desktop-up {
     max-width: 840px;
   }
@@ -22,8 +23,15 @@
       object-fit: cover;
       object-position: left;
       width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
+}
+
+.text-container {
+  z-index: -1;
 }
 
 .hero-text {
@@ -34,6 +42,8 @@
   }
 
   @include mx.for-desktop-up {
+    position: absolute;
+    top: 0;
     padding: 8.75rem 6.25rem;
   }
 
@@ -81,4 +91,29 @@
       cursor: pointer;
     }
   }
+}
+
+// TRANSITIONS
+
+.hero-text {
+  transform: translate(0, 0);
+  transition: all 750ms ease-out;
+}
+
+.img-one,
+.img-two,
+.img-three {
+  transform: translate(0, 0);
+  transition: all 750ms ease-out;
+}
+
+.slide-left {
+  transform: translate(-100%, 0);
+}
+.slide-up {
+  transform: translate(0, -100%);
+}
+
+.slide-right {
+  transform: translate(100%, 0);
 }
