@@ -20,16 +20,16 @@ export default function Navbar() {
 
     window.addEventListener("scroll", closeMenu);
     document
-      .querySelector(".bkground-mask")
+      ?.querySelector(".bkground-mask")
       .addEventListener("click", closeMenu);
 
     return () => {
       window.removeEventListener("scroll", closeMenu);
       document
-        .querySelector(".bkground-mask")
+        ?.querySelector(".bkground-mask")
         .removeEventListener("click", closeMenu);
     };
-  });
+  }, [menuOpen]);
 
   return (
     <>
