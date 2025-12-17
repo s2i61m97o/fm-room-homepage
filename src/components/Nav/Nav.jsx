@@ -1,10 +1,10 @@
-import "./Nav.scss";
+import {useEffect, useState} from "react";
+
+import clsx from "clsx";
+import roomLogo from "/images/logo.svg";
 import hamburgerIcon from "/src/assets/images/icon-hamburger.svg";
 import closeIcon from "/src/assets/images/icon-close.svg";
-import roomLogo from "/images/logo.svg";
-import clsx from "clsx";
-
-import {useState} from "react";
+import "./Nav.scss";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,6 +12,24 @@ export default function Navbar() {
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
   }
+
+  useEffect(() => {
+    function closeMenu() {
+      menuOpen ? setMenuOpen(false) : undefined;
+    }
+
+    window.addEventListener("scroll", closeMenu);
+    document
+      .querySelector(".bkground-mask")
+      .addEventListener("click", closeMenu);
+
+    return () => {
+      window.removeEventListener("scroll", closeMenu);
+      document
+        .querySelector(".bkground-mask")
+        .removeEventListener("click", closeMenu);
+    };
+  });
 
   return (
     <>

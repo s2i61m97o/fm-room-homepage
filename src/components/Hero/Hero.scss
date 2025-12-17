@@ -33,6 +33,7 @@
   grid-area: text;
   transform: translate(0, 0);
   transition: all 750ms ease-out;
+  background-color: b.$white;
   
 
   @include mx.for-tablet-portrait-up {

@@ -123,15 +123,16 @@ header {
   z-index: -100;
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  transition: all 500ms ease-in;
+  height: 150vh;
+  transition: opacity 500ms linear, z-index 1ms linear 500ms;
 }
 
 .bkground-mask.show {
   opacity: 0.5;
   z-index: 25;
+  transition: opacity 500ms linear, z-index 1ms linear;
 }
 
 @media (prefers-reduced-motion: reduce) {
